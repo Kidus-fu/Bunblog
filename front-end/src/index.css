@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.StartAnimation {
+    animation: Sa 1s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    will-change: opacity, transform, margin; /* Hint to browsers for optimization */
+}
+html {
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+@keyframes Sa {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) rotate(-10deg) scale(0.8);
+    }
+    50% {
+        opacity: 0.4;
+        transform: translateX(-50px) rotate(-5deg) scale(0.9);
+    }
+    100% {
+        margin: 30px;
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg) scale(1);
+    }
+}

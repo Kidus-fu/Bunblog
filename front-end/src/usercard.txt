@@ -1,0 +1,23 @@
+<div className="container m-4 w-80  border border-gray-200 shadow-slate-500 shadow-2xl rounded-xl">
+        <div className="flex justify-items-center justify-center">
+          <img
+            src={
+              userdatainfo.profile_picture
+                ? userdatainfo.profile_picture
+                : "https://th.bing.com/th/id/OIP.7O4_GREtLbxqPdJCTmfatQHaHa?rs=1&pid=ImgDetMain"
+            }
+            alt={userdatainfo.user}
+            className="h-40 w-40 m-5  rounded-full shadow-lg  border-2 p-2 "
+            style={{ borderColor: "#151165" }}
+            srcset=""
+          />
+        </div>
+        <div className="flex-1 justify-center text-center text-black">
+          <h2 className="text-4xl font-semibold my-3">{userdatainfo.user}</h2>
+          <p>{userdatainfo.bio ? userdatainfo.bio : ""}</p>
+        </div>
+        <div className="flex gap-5 mt-3 mb-2 justify-center justify-items-center">
+          <button className="py-3 bg-btnColorMess hover:bg-btnColorMessHov text-white px-3 rounded-lg">Message</button>
+          <button>Message</button>
+        </div>
+      </div>
